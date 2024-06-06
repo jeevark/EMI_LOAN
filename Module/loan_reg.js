@@ -53,7 +53,17 @@ const loan = {
                     });
                 }}          
 
-        }
+        },
+        getloan_deti: async(req,res)=>{
+
+            const results = await Module.find()
+            res.status(200).json({status:200,result:results});
+        },
+        getoneloan: async(req,res)=>{
+
+            const results = await Oneloan.find()
+            res.status(200).json({status:200,result:results});
+        },
 }
 
 module.exports = loan;

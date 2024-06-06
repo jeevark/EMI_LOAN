@@ -32,7 +32,10 @@ const paid = require('./Module/paidloan');
 app.post('/insert',customer.signup);
 app.get('/getcustomer',customer.getcustmoer);
 app.post('/loaninf',loan_inf.Register);
-app.post("/paidget",paid.paid);
+app.get('/getloan',loan_inf.getloan_deti)
+app.get('/getoneloan',loan_inf.getoneloan)
+app.post('/paidget',paid.paid);
+app.get('/getbill',paid.getpayment);
 
 
 

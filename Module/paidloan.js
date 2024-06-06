@@ -19,7 +19,7 @@ const paid ={
          }
          if(paid_detail.Emi_amount!==results.one_Month_Emi){
                 bill.deposit_status = "part"
-                const value = await Bill.create(bill); 
+                const value = await Bill.create(bill);  
                 res.status(200).send({result:value});
          }
          const value = await Bill.create(bill); 
@@ -27,7 +27,12 @@ const paid ={
         } catch (error) {
             res.send(error);
         }
-    }
-}
+    },
+ getpayment: async(req,res)=>{
 
+    const results = await Bill.find()
+    res.status(200).json({status:200,result:results});
+},
+}
+ 
 module.exports = paid;
