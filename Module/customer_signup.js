@@ -18,7 +18,7 @@ signup: async(req,res)=>{
         }
             console.log(value);
             const results = await Collection.create(value);
-                res.status(200).json({status:200,result:results});
+                res.status(200).json({result:results});
  } catch (error) {
     console.error('Error creating user:', error);
     if (error.code === 11000) {

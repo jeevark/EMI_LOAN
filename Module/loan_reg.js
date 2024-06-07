@@ -25,30 +25,30 @@ const loan = {
                         total_vatti       : total_vatti,
                         Vatti_Asal_Total  : emiamout,
                         one_Month_Emi     : one_emi
-                   }
+                }
     
                 //    console.log("oneMonth_vatti : "+one_vatti);
                 //    console.log("total_vatti : "+total_vatti);
                 //    console.log("TotalAmout : "+emiamout);
                 //    console.log("one_emi : "+one_emi)
 
-                   console.log(loan_inf);
-                   console.log(cu_loan);
+                        console.log(loan_inf);
+                        console.log(cu_loan);
 
-                   const results = await Module.create(loan_inf);
-                   await Oneloan.create(cu_loan);
+                        const results = await Module.create(loan_inf);
+                        await Oneloan.create(cu_loan);
 
                 res.status(200).json({result:cu_loan});
                 
             } catch (error) {
                 console.error('Error creating user:', error);
-                if (error.code === 11000) {
-                    // Duplicate key violation error
-                    res.status(409).json({
+                    if (error.code === 11000) {
+                         // Duplicate key violation error
+                        res.status(409).json({
                         error: 'Duplicate key error'
                     });
-                } else {
-                    res.status(500).json({
+                    } else {
+                        res.status(500).json({
                         error: 'Internal Server Error'
                     });
                 }}          

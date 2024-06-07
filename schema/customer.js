@@ -11,6 +11,7 @@ const mongoose = require('mongoose');
     }, 
     Aadhar_No: { 
         type: String, 
+        unique:true, 
         require: true
     },
     Address: { 
@@ -40,7 +41,6 @@ const mongoose = require('mongoose');
     },
     Reference: { 
         type: String, 
-        unique:true,
         require: true
     },
     date : {
