@@ -33,6 +33,8 @@ const paid ={
     const results = await Bill.find()
     res.status(200).json({status:200,result:results});
 },
+
+
 }
  
 module.exports = paid;
