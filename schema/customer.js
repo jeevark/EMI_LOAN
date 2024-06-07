@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const date = new Date().toLocaleDateString();
 
   const mageSchema = new mongoose.Schema({ 
     Full_Name: { 
