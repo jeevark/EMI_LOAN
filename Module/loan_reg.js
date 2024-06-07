@@ -12,7 +12,7 @@ const loan = {
                     lone_reg          : req.body.lone_reg
                 }
     
-                   const one_vatti = (2/100)*loan_inf.Total_Amount;
+                   const one_vatti = (loan_inf.Vatti_percentage/100)*loan_inf.Total_Amount;
                    const total_vatti = one_vatti*loan_inf.EMI_Month;
                    const emiamout =total_vatti+loan_inf.Total_Amount;
                    const one_emi =  parseInt(emiamout/loan_inf.EMI_Month);
